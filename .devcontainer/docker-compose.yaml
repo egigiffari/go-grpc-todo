@@ -1,0 +1,9 @@
+services:
+  devcontainer:
+    build:
+      context: "."
+      dockerfile: Dockerfile
+    image: go-grpc:0.1
+    volumes:
+      - ../:/workspaces:cached
+    command: /bin/bash -c "echo 'Running'; sleep infinity"

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package todo.service;
+
+option go_package = "go-grpc/pb";
+
+message Todo {
+    string id = 1;
+    string name = 2;
+    bool done = 3;
+}

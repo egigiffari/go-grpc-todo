@@ -3,8 +3,8 @@ gen:
     --go-grpc_out=pb --go-grpc_opt=paths=source_relative \
 	--proto_path=proto proto/*.proto
 
-build:
-	@go build -o ./bin/ctl main.go
+run_client:
+	@go run cmd/client/main.go
 
-run: build
-	@bin/ctl
+run_server:
+	@go run cmd/server/main.go

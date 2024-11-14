@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package todo.service;
+option go_package = "github.com/egigiffari/go-grpc-todo/pb";
 
-option go_package = "go-grpc/pb";
+package pb;
 
 message Todo {
     string id = 1;

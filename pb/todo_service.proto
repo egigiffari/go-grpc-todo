@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "github.com/egigiffari/go-grpc-todo/pb";
+
+package pb;
+
+import "todo_message.proto";
+
+service TodoService {
+    rpc Create(CreateTodoRequest) returns (CreateTodoResponse) {}
+}
+
+message CreateTodoRequest {
+    Todo todo = 1;
+}
+
+message CreateTodoResponse {
+    string id = 1;
+}
+
